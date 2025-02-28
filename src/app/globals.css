@@ -1,0 +1,33 @@
+@import "tailwindcss";
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: Federo, sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h2 {
+  font-family: Federo, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24.38px;
+  letter-spacing: 0%;
+  color: #666;
+}
