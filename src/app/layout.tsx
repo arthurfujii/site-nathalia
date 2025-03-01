@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import "./globals.css";
 import Image from "next/image";
+import { Footer } from "@/components/Footer";
 
 export default function RootLayout({
   children,
@@ -19,7 +20,13 @@ export default function RootLayout({
             alt="background"
             width={1920}
             height={1080}
-            style={{ position: "fixed", top: -250, left: 0, zIndex: -1 }}
+            style={{
+              position: "fixed",
+              top: -300,
+              left: "50%",
+              zIndex: -1,
+              transform: "translateX(-50%)",
+            }}
           />
           <Image
             src="/images/movimento.png"
@@ -42,6 +49,7 @@ export default function RootLayout({
             }}
           />
         </div>
+        <Footer />
       </body>
     </html>
   );

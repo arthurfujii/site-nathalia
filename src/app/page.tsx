@@ -5,7 +5,7 @@ import QuemSou from "./quemsou/page";
 
 export default function Page() {
   return (
-    <main>
+    <main className="max-w-[1200px] mx-auto">
       <Home />
       <QuemSou />
       <Especialidades />
