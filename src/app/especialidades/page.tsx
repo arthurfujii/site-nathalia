@@ -1,4 +1,5 @@
 import { Card } from "@/components/Card";
+import axios from "axios";
 
 type ImageProps = {
   path: string;
@@ -13,10 +14,9 @@ type Especialidade = {
 };
 
 export default async function Especialidades() {
-  const especialidades = await fetch(
-    "http://localhost:3333/especialidades"
-  ).then((response) => response.json());
-
+  const especialidades: Especialidade[] = await axios(
+    "http://localhost:3000/api/especialidades"
+  ).then((response) => response.data.especialidades);
   return (
     <section
       className="flex flex-col gap-10 py-32 items-center"

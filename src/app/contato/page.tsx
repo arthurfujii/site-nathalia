@@ -1,24 +1,28 @@
-"use server";
+"use client";
 import Image from "next/image";
-import sendEmail from "@/utils/sendEmail";
 
-export default async function Contato() {
-  async function handleSubmit(formData: FormData) {
-    "use server";
+export default function Contato() {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.target as HTMLFormElement);
+    try {
+      const response = await fetch("/api/contato", {
+        method: "POST",
+        body: formData,
+      });
 
-    const email = formData.get("email");
-    const nome = formData.get("nome");
-    const mensagem = formData.get("mensagem");
-    if (!email || !nome || !mensagem) {
-      return;
+      if (!response.ok) {
+        console.log("falling over");
+        throw new Error(`response status: ${response.status}`);
+      }
+      const responseData = await response.json();
+      console.log(responseData["message"]);
+
+      alert("Mensagem enviada com sucesso");
+    } catch (err) {
+      console.error(err);
+      alert("Houve um erro ao enviar a mensagem, tente novamente");
     }
-    sendEmail(
-      JSON.stringify(email),
-      `Contato pelo site de ${nome}`,
-      JSON.stringify(mensagem)
-    )
-      .then(() => alert("E-mail enviado com sucesso!"))
-      .catch((error) => alert(`Erro ao enviar e-mail: ${error}`));
   }
 
   return (
@@ -32,7 +36,7 @@ export default async function Contato() {
         <section className="grid grid-cols-2 gap-5">
           <form
             className="flex flex-col gap-2.5 w-md col-auto"
-            action={handleSubmit}
+            onSubmit={handleSubmit}
           >
             <label htmlFor="nome" className="hidden">
               Nome
