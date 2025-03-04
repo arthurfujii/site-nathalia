@@ -1,34 +1,33 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export function Header() {
   return (
-    <header className="py-5 px-32 bg-[#F0F8F9] fixed w-full z-50">
-      <article className="flex justify-between items-center max-w-[1200px] mx-auto">
-        <Link href={"#home"}>
+    <header className="py-2.5 bg-[#F0F8F9] fixed w-full z-50">
+      <article className="flex justify-between items-center max-w-[900px] mx-auto">
+        <a href={"#home"}>
           <Image
             src="/images/logo_horizontal.png"
             alt="logo"
             width={135}
             height={60}
           />
-        </Link>
+        </a>
         <div>
           <nav>
             <ul className="flex flex-row gap-10 font-[Federo] text-[#9785BD]">
               <li>
-                <Link href={"#quemsou"}>
+                <a href={"#quemsou"}>
                   <h2>Quem sou</h2>
-                </Link>
+                </a>
               </li>
               <li>
                 <h2>
-                  <Link href={"#especialidades"}>Especialidades</Link>
+                  <a href={"#especialidades"}>Especialidades</a>
                 </h2>
               </li>
               <li>
                 <h2>
-                  <Link href={"#contato"}>Contato</Link>
+                  <a href={"#contato"}>Contato</a>
                 </h2>
               </li>
             </ul>

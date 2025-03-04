@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="bg-[#9785BD] w-full sticky top-[100vh] pt-15 pb-32 px-32 ">
-      <article className="flex gap-10 justify-between mx-auto max-w-[1200px]">
+    <footer className="bg-[#9785BD] w-full sticky top-[100vh] pt-15 pb-32">
+      <article className="flex gap-10 justify-between mx-auto max-w-[900px]">
         <section className="flex flex-col gap-2">
           <a
             href="https://wa.me/5511987654321?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta."

@@ -42,7 +42,7 @@ export default function RootLayout({
             height={1231}
             style={{
               position: "fixed",
-              bottom: -150,
+              bottom: -300,
               right: -300,
               zIndex: -1,
               transform: "scaleX(-1)",
