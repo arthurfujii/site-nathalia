@@ -1,11 +1,11 @@
-import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   const formData = await request.formData();
-  const nome = formData.get("nome");
-  const email = formData.get("email");
-  const mensagem = formData.get("mensagem");
+  const nome = formData.get('nome');
+  const email = formData.get('email');
+  const mensagem = formData.get('mensagem');
 
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -29,9 +29,9 @@ export async function POST(request: Request) {
       <p>Mensagem: ${mensagem}</p>
       `,
     });
-    return NextResponse.json({ message: "Email enviado com sucesso" });
+    return NextResponse.json({ message: 'Email enviado com sucesso' });
   } catch (error) {
     console.error(error);
-    NextResponse.json({ message: "Erro ao enviar email" });
+    NextResponse.json({ message: 'Erro ao enviar email' });
   }
 }

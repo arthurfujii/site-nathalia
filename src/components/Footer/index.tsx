@@ -1,81 +1,81 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export function Footer() {
   return (
-    <footer className="bg-[#9785BD] w-full sticky top-[100vh] pt-15 pb-32">
-      <article className="flex gap-10 justify-between mx-auto max-w-[900px]">
-        <section className="flex flex-col gap-2">
+    <footer className='sticky top-[100vh] w-full bg-[#9785BD] pt-15 pb-32'>
+      <article className='mx-auto flex max-w-[900px] justify-between gap-10'>
+        <section className='flex flex-col gap-2'>
           <a
-            href="https://wa.me/5511987654321?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta."
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://wa.me/5511987654321?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta.'
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            <div className="flex gap-2 items-center">
+            <div className='flex items-center gap-2'>
               <Image
-                src="/images/icon/icon_whatsapp-branco.png"
-                alt="whatsapp"
+                src='/images/icon/icon_whatsapp-branco.png'
+                alt='whatsapp'
                 width={24}
                 height={24}
               />
-              <span className="text-white font-[Montserrat]">
+              <span className='font-[Montserrat] text-white'>
                 + 55 11 98765-4321
               </span>
             </div>
           </a>
           <a
-            href="https://www.linkedin.com/in/nathaliacorreia.fisio/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://www.linkedin.com/in/nathaliacorreia.fisio/'
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            <div className="flex gap-2 items-center">
+            <div className='flex items-center gap-2'>
               <Image
-                src="/images/icon/icon_linkedin-branco.png"
-                alt="linkedin"
+                src='/images/icon/icon_linkedin-branco.png'
+                alt='linkedin'
                 width={24}
                 height={24}
               />
-              <span className="text-white font-[Montserrat]">
+              <span className='font-[Montserrat] text-white'>
                 /nathaliacorreia.fisio
               </span>
             </div>
           </a>
           <a
-            href="https://www.instagram.com/nathaliacorreia.fisio/"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://www.instagram.com/nathaliacorreia.fisio/'
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            <div className="flex gap-2 items-center">
+            <div className='flex items-center gap-2'>
               <Image
-                src="/images/icon/icon_instagram-branco.png"
-                alt="instagram"
+                src='/images/icon/icon_instagram-branco.png'
+                alt='instagram'
                 width={24}
                 height={24}
               />
-              <span className="text-white font-[Montserrat]">
+              <span className='font-[Montserrat] text-white'>
                 @nathaliacorreia.fisio
               </span>
             </div>
           </a>
         </section>
-        <section className="flex flex-col gap-2">
+        <section className='flex flex-col gap-2'>
           <a
-            href="https://maps.app.goo.gl/YedRLB2PHNtzSfJW7"
-            target="_blank"
-            rel="noopener noreferrer"
+            href='https://maps.app.goo.gl/YedRLB2PHNtzSfJW7'
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            <div className="flex gap-2 items-center">
+            <div className='flex items-center gap-2'>
               <Image
-                src="/images/icon/icon_map-branco.png"
-                alt="pin"
+                src='/images/icon/icon_map-branco.png'
+                alt='pin'
                 width={24}
                 height={24}
               />
-              <span className="text-white font-[Montserrat]">
+              <span className='font-[Montserrat] text-white'>
                 Av. Lins de Vasconcelos, 1609 - Cambuci - São Paulo - SP
               </span>
             </div>
           </a>
-          <Image src="/images/maps.png" alt="mapa" width={581} height={216} />
+          <Image src='/images/maps.png' alt='mapa' width={581} height={216} />
         </section>
       </article>
     </footer>
