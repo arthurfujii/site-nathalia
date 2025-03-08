@@ -3,7 +3,7 @@
 import { Nav } from '../Nav';
 import { useState } from 'react';
 import Image from 'next/image';
-import clsx from 'clsx';
+// import clsx from 'clsx';
 
 export function Menu() {
   const [isOpen, setIsOpen] = useState(false);

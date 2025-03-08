@@ -62,7 +62,7 @@ export const especialidades = [
   {
     id: 7,
     img: {
-      path: '/images/AdobeStock_444736322_Preview.jpeg',
+      path: '/images/AdobeStock_34962968_Preview.jpeg',
       alt: 'Descrição da imagem 7',
     },
     title: 'Método Bobath',
