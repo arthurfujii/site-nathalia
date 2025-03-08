@@ -2,18 +2,20 @@
 
 import { Nav } from '../Nav';
 import { useState } from 'react';
+
 import Image from 'next/image';
-// import clsx from 'clsx';
+import clsx from 'clsx';
 
 export function Menu() {
   const [isOpen, setIsOpen] = useState(false);
+
   function toggleOpen() {
     setIsOpen(!isOpen);
   }
   return (
     <div>
       <div className='block sm:hidden'>
-        <a href='#' onClick={toggleOpen}>
+        <a href='#menu' onClick={toggleOpen}>
           {isOpen ? (
             <Image
               src='/images/icon/icon_close.png'
@@ -34,7 +36,13 @@ export function Menu() {
       <div className='hidden sm:block'>
         <Nav />
       </div>
-      <aside></aside>
+      <aside
+        className={`menu fixed top-[76] left-0 z-49 h-screen w-full bg-[#F0F8F9] transition ${clsx({ hidden: !isOpen })}`}
+      >
+        <section className='flex items-center justify-center overflow-hidden py-30'>
+          <Nav toggleOpen={toggleOpen} />
+        </section>
+      </aside>
     </div>
   );
 }
