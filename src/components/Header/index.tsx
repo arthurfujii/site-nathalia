@@ -1,37 +1,32 @@
 import Image from 'next/image';
+import { Nav } from '../Nav';
 
 export function Header() {
   return (
-    <header className='fixed z-50 w-full bg-[#F0F8F9] py-2.5'>
-      <article className='mx-auto flex max-w-[900px] items-center justify-between'>
-        <a href={'#home'}>
-          <Image
-            src='/images/logo_horizontal.png'
-            alt='logo'
-            width={135}
-            height={60}
-          />
-        </a>
-        <div>
-          <nav>
-            <ul className='flex flex-row gap-10 font-[Federo] text-[#9785BD]'>
-              <li>
-                <a href={'#quemsou'}>
-                  <h2>Quem sou</h2>
-                </a>
-              </li>
-              <li>
-                <h2>
-                  <a href={'#especialidades'}>Especialidades</a>
-                </h2>
-              </li>
-              <li>
-                <h2>
-                  <a href={'#contato'}>Contato</a>
-                </h2>
-              </li>
-            </ul>
-          </nav>
+    <header className='fixed z-50 w-full bg-[#F0F8F9] px-5 py-2 sm:px-0'>
+      <article className='container mx-auto'>
+        <div className='flex items-center justify-between'>
+          <div>
+            <a href={'#home'}>
+              <Image
+                src='/images/logo_horizontal.png'
+                alt='logo'
+                width={135}
+                height={60}
+              />
+            </a>
+          </div>
+          <div className='block sm:hidden'>
+            <Image
+              src='/images/icon/icon_menu.png'
+              alt='menu'
+              width={30}
+              height={30}
+            />
+          </div>
+          <div className='hidden sm:block'>
+            <Nav />
+          </div>
         </div>
       </article>
     </header>
