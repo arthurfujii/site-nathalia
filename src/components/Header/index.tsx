@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Nav } from '../Nav';
+import { Menu } from '../Menu';
 
 export function Header() {
   return (
@@ -16,16 +16,8 @@ export function Header() {
               />
             </a>
           </div>
-          <div className='block sm:hidden'>
-            <Image
-              src='/images/icon/icon_menu.png'
-              alt='menu'
-              width={30}
-              height={30}
-            />
-          </div>
-          <div className='hidden sm:block'>
-            <Nav />
+          <div>
+            <Menu />
           </div>
         </div>
       </article>

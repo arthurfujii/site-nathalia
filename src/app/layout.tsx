@@ -1,7 +1,6 @@
 import { Header } from '@/components/Header';
 import './globals.css';
 import { Footer } from '@/components/Footer';
-import { Menu } from '@/components/Menu';
 
 export default function RootLayout({
   children,
@@ -14,11 +13,12 @@ export default function RootLayout({
         <meta name='viewport' content='initial-scale=1, width=device-width' />
       </head>
       <body>
-        {/* <Menu /> */}
-        <Header />
-        {children}
+        <div className='App'>
+          <Header />
+          {children}
 
-        <Footer />
+          <Footer />
+        </div>
       </body>
     </html>
   );
