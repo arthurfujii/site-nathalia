@@ -1,3 +1,15 @@
+type imgProps = {
+  path: string;
+  alt: string;
+};
+
+export type Especialidade = {
+  id: number;
+  img: imgProps;
+  title: string;
+  description: string;
+};
+
 export const especialidades = [
   {
     id: 1,
