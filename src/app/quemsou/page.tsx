@@ -13,7 +13,7 @@ export default function QuemSou() {
             className='rounded-2xl'
           />
         </div>
-        <section className='flex w-full flex-col justify-evenly'>
+        <section className='flex w-full flex-col justify-evenly gap-5'>
           <h1 className='text-[#FBC971]'>Quem sou</h1>
           <section className='flex w-full flex-col gap-1'>
             <p>
