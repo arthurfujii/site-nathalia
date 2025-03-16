@@ -5,7 +5,9 @@
 :root {
   scroll-behavior: smooth;
 }
-
+html {
+  font-size: 16px;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -22,25 +24,34 @@ body {
 
 h1 {
   font-family: Federo, sans-serif;
-  font-size: 36px;
+  font-size: 1.875rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  @media (width >= 64rem) {
+    font-size: 2.25rem;
+  }
 }
 
 h2 {
   font-family: Federo, sans-serif;
-  font-size: 22px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  @media (width >= 64rem) {
+    font-size: 1.5rem;
+  }
 }
 
 p {
   font-family: Montserrat;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24.38px;
+  font-size: 1rem;
+  line-height: 1.524rem;
   letter-spacing: 0%;
   color: #666;
+  @media (width >= 64rem) {
+    font-size: 1.125rem;
+  }
 }

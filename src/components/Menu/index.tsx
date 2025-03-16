@@ -37,7 +37,7 @@ export function Menu() {
         <Nav />
       </div>
       <aside
-        className={`menu animate-fade-down animate-once animate-duration-200 animate-delay-300 animate-normal fixed top-[76] left-0 z-49 h-screen w-full bg-[#F0F8F9] ${clsx({ hidden: !isOpen })}`}
+        className={`menu animate-fade-down animate-once animate-duration-200 animate-delay-50 animate-normal fixed top-[76] left-0 z-49 h-screen w-full bg-[#F0F8F9] ${clsx({ hidden: !isOpen })}`}
       >
         <section className='flex items-center justify-center overflow-hidden py-30'>
           <Nav toggleOpen={toggleOpen} />
