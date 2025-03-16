@@ -3,8 +3,8 @@ import { Menu } from '../Menu';
 
 export function Header() {
   return (
-    <header className='fixed z-50 w-full bg-[#F0F8F9] px-5 py-2 sm:px-0'>
-      <article className='container mx-auto px-5'>
+    <header className='fixed z-50 w-full bg-[#F0F8F9] px-10 py-2'>
+      <article className='container mx-auto'>
         <div className='flex items-center justify-between'>
           <div>
             <a href={'#home'}>

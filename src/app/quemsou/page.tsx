@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default function QuemSou() {
   return (
     <section className='container mx-auto' id='quemsou'>
-      <div className='flex flex-col items-center justify-center gap-10 sm:flex-row'>
+      <div className='flex flex-col items-center justify-center gap-10 sm:flex-row-reverse'>
         <div className='block'>
           <Image
             src='/images/fake_profile_pic.jpg'
@@ -13,9 +13,9 @@ export default function QuemSou() {
             className='rounded-2xl'
           />
         </div>
-        <section className='flex w-full flex-col justify-evenly gap-5'>
+        <div className='flex w-full flex-col justify-evenly gap-5'>
           <h1 className='text-[#FBC971]'>Quem sou</h1>
-          <section className='flex w-full flex-col gap-1'>
+          <div className='flex w-full flex-col gap-1'>
             <p>
               Meu nome é Ana Paula, sou fisioterapeuta com especialização em
               reabilitação motora e neurológica de crianças e adultos.
@@ -28,8 +28,8 @@ export default function QuemSou() {
               Minha missão é ajudar você a recuperar a qualidade de vida e a
               autonomia, por meio de tratamentos eficazes e inovadores.
             </p>
-          </section>
-        </section>
+          </div>
+        </div>
       </div>
     </section>
   );

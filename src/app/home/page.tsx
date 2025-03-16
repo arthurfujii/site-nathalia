@@ -3,8 +3,8 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <section className='container mx-auto' id='home'>
-      <div className='flex flex-col items-center gap-20 pt-50 pb-20 sm:flex-row sm:items-center sm:justify-center'>
-        <div className='flex max-w-lg items-center justify-center'>
+      <div className='my-50 flex flex-col items-center gap-20 sm:flex-row sm:items-center sm:justify-center'>
+        <div className='flex max-w-lg items-center justify-center px-10'>
           <Image
             src='/images/logo_vertical.png'
             alt='logo'

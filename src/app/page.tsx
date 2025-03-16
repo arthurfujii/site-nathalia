@@ -34,13 +34,19 @@ export default function Page() {
         </div>
       </div>
 
-      <div className='flex flex-col gap-15 px-10 sm:gap-30 sm:px-0'>
-        <Home />
-        <QuemSou />
-        <div className='bg-amber-600'>
+      <div className='flex flex-col sm:px-0'>
+        <div className='py-20'>
+          <Home />
+        </div>
+        <div className='bg-[#5EC0D1]/20 px-10 py-20'>
+          <QuemSou />
+        </div>
+        <div className='bg-[#F2969E]/20 px-10 py-20'>
           <Especialidades />
         </div>
-        <Contato />
+        <div className='bg-[#FBC971]/20 px-10 py-20'>
+          <Contato />
+        </div>
       </div>
     </main>
   );
