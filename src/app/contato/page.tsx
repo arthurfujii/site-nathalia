@@ -5,6 +5,17 @@ export default function Contato() {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
+    const validateEmail = (email: string) => {
+      const regex =
+        /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+      return regex.test(email);
+    };
+
+    if (validateEmail(formData.get('email') as string) === false) {
+      alert('E-mail inválido');
+      return;
+    }
+
     try {
       const response = await fetch('/api/contato', {
         method: 'POST',
@@ -19,6 +30,7 @@ export default function Contato() {
       console.log(responseData['message']);
 
       alert('Mensagem enviada com sucesso');
+      (event.target as HTMLFormElement).reset();
     } catch (err) {
       console.error(err);
       alert('Houve um erro ao enviar a mensagem, tente novamente');
@@ -48,6 +60,7 @@ export default function Contato() {
                 placeholder='Nome'
                 className='block w-full rounded-2xl border border-gray-500 bg-white px-5 py-2.5 sm:max-w-md'
                 name='nome'
+                required
               />
               <label htmlFor='email' className='hidden'>
                 E-mail
@@ -58,6 +71,7 @@ export default function Contato() {
                 placeholder='E-mail'
                 className='block w-full rounded-2xl border border-gray-500 bg-white px-5 py-2.5 sm:max-w-md'
                 name='email'
+                required
               />
               <label htmlFor='mensagem' className='hidden'>
                 Mensagem
@@ -67,6 +81,7 @@ export default function Contato() {
                 placeholder='Mensagem'
                 className='h-30 w-full resize-none rounded-2xl border border-gray-500 bg-white px-5 py-2.5 sm:h-60 sm:max-w-md'
                 name='mensagem'
+                required
               />
               <button
                 type='submit'
