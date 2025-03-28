@@ -17,8 +17,8 @@ export default function QuemSou() {
           <h1 className='text-[#FBC971]'>Quem sou</h1>
           <div className='flex w-full flex-col gap-1'>
             <p>
-              Meu nome é Ana Paula, sou fisioterapeuta com especialização em
-              reabilitação motora e neurológica de crianças e adultos.
+              Meu nome é Nathalia Correia, sou fisioterapeuta com especialização
+              em reabilitação motora e neurológica de crianças e adultos.
             </p>
             <p>
               Atuo há 20 anos na área, com foco em cuidado humanizado e

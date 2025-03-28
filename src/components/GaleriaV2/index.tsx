@@ -10,7 +10,7 @@ export function GaleriaV2() {
       {especialidades.map((especialidade: Especialidade) => (
         <div
           key={especialidade.id}
-          className='mx-auto max-w-[1024px] overflow-hidden rounded-xl bg-white shadow-md'
+          className='mx-auto max-w-[1024px] overflow-hidden rounded-xl bg-gray-50 shadow-md'
         >
           <div
             className={`sm:flex sm:gap-5 ${clsx({ 'sm:flex-row-reverse': especialidade.id % 2 === 0 })}`}
