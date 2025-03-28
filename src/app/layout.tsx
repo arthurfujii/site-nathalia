@@ -1,6 +1,27 @@
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Nathalia Correia - Fisioterapeuta Neurofuncional',
+  description:
+    'Fisioterapeuta especializada em atendimento neurofuncional, com foco em saúde mental e física.',
+  openGraph: {
+    title: 'Nathalia Correia - Fisioterapeuta Neurofuncional',
+    description:
+      'Fisioterapeuta especializada em atendimento neurofuncional, com foco em saúde mental e física.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+};
 
 export default function RootLayout({
   children,

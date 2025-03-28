@@ -38,13 +38,13 @@ export default function Page() {
         <div className='py-20'>
           <Home />
         </div>
-        <div className='bg-[#5EC0D1]/20 px-10 py-20'>
+        <div className='px-10 py-20'>
           <QuemSou />
         </div>
-        <div className='bg-[#F2969E]/20 px-10 py-20'>
+        <div className='px-10 py-20'>
           <Especialidades />
         </div>
-        <div className='bg-[#FBC971]/20 px-10 py-20'>
+        <div className='px-10 py-20'>
           <Contato />
         </div>
       </div>
