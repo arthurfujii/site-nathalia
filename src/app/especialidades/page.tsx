@@ -16,13 +16,12 @@ export type Especialidade = {
 
 export default function Especialidades() {
   return (
-    <section id='especialidades' className='container mx-auto'>
-      <div className='flex flex-col gap-10'>
-        <h1 className='block text-[#5EC0D1]'>Especialidades</h1>
-        <div className='block'>
-          <GaleriaV2 />
-        </div>
-      </div>
+    <section
+      id='especialidades'
+      className='container flex flex-col gap-10 p-10'
+    >
+      <h1 className='text-[#5EC0D1]'>Especialidades</h1>
+      <GaleriaV2 />
     </section>
   );
 }

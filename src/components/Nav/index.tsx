@@ -11,7 +11,7 @@ export function Nav({ toggleOpen }: NavProps) {
     scroller.scrollTo(id, {
       duration: 200,
       smooth: true, // Smooth scroll
-      offset: -156, // Offset to account for the fixed header
+      offset: -80, // Offset to account for the fixed header
     });
   };
   function action(id: string) {
