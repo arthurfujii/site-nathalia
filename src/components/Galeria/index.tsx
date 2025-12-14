@@ -11,6 +11,7 @@ import Image from 'next/image';
 export function Galeria() {
   return (
     <Swiper
+      className='!py-10'
       spaceBetween={20}
       centeredSlides={true}
       grabCursor={true}
@@ -24,8 +25,8 @@ export function Galeria() {
       modules={[Autoplay]}
     >
       {especialidades.map((item) => (
-        <SwiperSlide key={item.id}>
-          <div className='mx-auto mb-5 overflow-hidden rounded-2xl shadow-md sm:max-w-120'>
+        <SwiperSlide key={item.id} className='!h-auto'>
+          <div className='mx-auto mb-5 h-full overflow-hidden rounded-2xl shadow-md sm:max-w-120'>
             <Image
               src={item.img.path}
               width={600}
