@@ -4,6 +4,12 @@
 
 :root {
   scroll-behavior: smooth;
+  --color-pink: #f2969e;
+  --color-yellow: #fbc971;
+  --color-blue: #5ec0d1;
+  --color-purple: #9785bd;
+  --color-green: #bcd079;
+  --color-text: #666666;
 }
 html {
   font-size: 16px;
@@ -50,7 +56,7 @@ p {
   font-size: 1rem;
   line-height: 1.524rem;
   letter-spacing: 0%;
-  color: #666;
+  color: var(--color-text);
   @media (width >= 64rem) {
     font-size: 1.125rem;
   }

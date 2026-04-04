@@ -34,7 +34,9 @@ export function Galeria() {
               className='h-full w-full object-cover sm:h-90 sm:w-full'
             />
             <div className='p-5'>
-              <h2 className='mt-2 block text-[#F2969E]'>{item.title}</h2>
+              <h2 className='mt-2 block text-[var(--color-pink)]'>
+                {item.title}
+              </h2>
               <p className='mt-2 block text-left'>{item.description}</p>
             </div>
           </div>

@@ -10,7 +10,7 @@ export function GaleriaV2() {
       {especialidades.map((especialidade: Especialidade) => (
         <div
           key={especialidade.id}
-          className='mx-auto max-w-[1024px] overflow-hidden rounded-xl bg-gray-50 shadow-md'
+          className='animate-fade-up mx-auto max-w-[1024px] overflow-hidden rounded-xl bg-gray-50 shadow-md transition-shadow hover:shadow-lg'
         >
           <div
             className={`sm:flex sm:gap-5 ${clsx({ 'sm:flex-row-reverse': especialidade.id % 2 === 0 })}`}
@@ -27,7 +27,9 @@ export function GaleriaV2() {
             <div
               className={`flex flex-col justify-center p-6 ${clsx({ 'sm:text-right': especialidade.id % 2 === 0 })}`}
             >
-              <h2 className='mt-2 text-[#F2969E]'>{especialidade.title}</h2>
+              <h2 className='mt-2 text-[var(--color-pink)]'>
+                {especialidade.title}
+              </h2>
               <p className='mt-2'>{especialidade.description}</p>
             </div>
           </div>

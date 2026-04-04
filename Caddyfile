@@ -1,0 +1,9 @@
+# Configuração para desenvolvimento local
+localhost {
+    reverse_proxy app:3000
+}
+
+# Exemplo de configuração para produção (descomente e altere o domínio)
+# seudominio.com.br {
+#     reverse_proxy app:3000
+# }
